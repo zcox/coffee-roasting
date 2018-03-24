@@ -18,7 +18,7 @@ Currently I'm using a [PT100 platinum RTD sensor](https://www.adafruit.com/produ
 
 ## Sound
 
-As the coffee beans heat up during the roast, they make "cracking" sounds. First crack and second crack are important points in time to note during the roast. I plan to use a [small microphone](https://www.adafruit.com/product/3421) placed near the roasting chamber as input to come kind of audio-processing program to detect the cracks.
+As the coffee beans heat up during the roast, they make "cracking" sounds. First crack and second crack are important points in time to note during the roast. I plan to use a [small microphone](https://www.adafruit.com/product/3421) placed near the roasting chamber as input to an audio-processing program to detect the cracks.
 
 ## Vision
 
@@ -29,3 +29,7 @@ An [RGB color sensor](https://www.adafruit.com/product/1334) might also be inter
 # Controls
 
 For now, I'm just relying on [Openroast](https://github.com/Roastero/Openroast) to control the roaster. Its time-step-based programs are "good enough" for now. Their [freshroastsr700](https://github.com/Roastero/freshroastsr700) Python library would be a good way to start writing control programs, although eventually I'd like to build from the ground-up in Scala.
+
+# Display
+
+It's important to display sensor data and any derived information during the roast. Openroast provides some basics, and is open source, so I may initially try to add more displays to it. Longer-term, maybe an LCD attached to the Raspberry Pi would be interesting to pursue.
