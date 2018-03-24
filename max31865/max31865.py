@@ -69,15 +69,15 @@ class max31865(object):
       
     temp_C = self.calcPT100Temp(rtd_ADC_Code)
 
-    # [hft_msb, hft_lsb] = [out[3], out[4]]
+    # [hft_msb, hft_lsb] = [out[2], out[3]]
     # hft = (( hft_msb << 8 ) | hft_lsb ) >> 1
     # print "high fault threshold: %d" % hft
 
-    # [lft_msb, lft_lsb] = [out[5], out[6]]
+    # [lft_msb, lft_lsb] = [out[4], out[5]]
     # lft = (( lft_msb << 8 ) | lft_lsb ) >> 1
     # print "low fault threshold: %d" % lft
 
-    status = out[7]
+    status = out[6]
     #
     # 10 Mohm resistor is on breakout board to help
     # detect cable faults
